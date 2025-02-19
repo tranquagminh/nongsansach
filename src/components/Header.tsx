@@ -4,7 +4,7 @@ import { BsCart3 } from "react-icons/bs";
 
 export default function Header(){
     return (
-        <header className="">
+        <header className="bg-white">
             <div className="text-white p-2 bg-[#115036]">
                 <div className="container m-auto">
                     <div className="flex text-lg">

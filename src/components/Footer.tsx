@@ -1,9 +1,29 @@
+"use client"
 import Image from "next/image";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { useEffect } from "react";
 
 export default function Footer() {
+  
+  useEffect(() => {
+    const backToTopButton = document.getElementById("back-to-top");
+
+    if (backToTopButton) {
+      window.onscroll = () => {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          backToTopButton.style.display = "block"; 
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      };
+
+      backToTopButton.onclick = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+    }
+  }, []);
     return (
-<footer className="bg-[#019359] text-white">
+    <footer className="bg-[#019359] text-white">
       <div className="container mx-auto py-8">
         {/* Logo and Description Section */}
         <div className="grid grid-cols-12 gap-8">
@@ -66,13 +86,21 @@ export default function Footer() {
       </div>
 
       {/* Copyright Section */}
-      <div className="border-t border-gray-600">
+      <div className="border-t relative border-gray-600 bg-[#22754e]">
+      
+        <div id="back-to-top" className="w-[127px] h-[37px] top-[-35px] left-1/2  absolute -translate-x-1/2">
+          <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="127px" height="37px" viewBox="0 0 127 37" preserveAspectRatio="xMidYMid meet">
+            <g transform="translate(0.000000,37.000000) scale(0.100000,-0.100000)" fill="#22754e" stroke="none">
+                <path d="M543 356 c-93 -30 -181 -104 -259 -216 -36 -53 -115 -103 -194 -124
+                -50 -13 0 -15 555 -15 555 0 605 2 555 15 -79 21 -158 71 -194 124 -59 86
+                -137 159 -203 192 -76 37 -188 48 -260 24z"></path>
+            </g>  
+          </svg>
+        </div>
         <div className="container mx-auto py-4 flex justify-between items-center">
           <p>Copyright © 2008-2023 Nông Sản Sạch</p>
           <div className="flex gap-2">
-            <Image src="/paypal.png" alt="PayPal" width={50} height={30} />
-            <Image src="/visa.png" alt="Visa" width={50} height={30} />
-            <Image src="/mastercard.png" alt="Mastercard" width={50} height={30} />
+            <Image src="/footer_payment_01.png" alt="PayPal" width={133} height={20} />
           </div>
         </div>
       </div>
