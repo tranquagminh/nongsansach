@@ -23,22 +23,20 @@ const HomePage = () => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 4, // Số ảnh hiển thị trên 1 lần cuộn
+        slidesToShow: 4, 
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
         nextArrow: <NextArrow />,
     };
     return (    
-        <div id="content" className="content bg-white">
+        <div id="content" className="content bg-white overflow-x-hidden">
             <div className="container mx-auto px-4">
                 <div id="primary" className="content-area row">
-
-                {/* Hero Section */}
                 <div>
 
                 </div>
-                <section className="relative bg-gray-100 text-center">
+                <section className="relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-gray-100 text-center">
                     <Image
                     src="/img/slider-home-03-slide3-background.jpg" 
                     alt="Hero Image" 
@@ -57,7 +55,7 @@ const HomePage = () => {
                 {/* About Us Section */}
                 <section className="py-[100px] ">
                     <div className="mb-[100px]">
-                        <div className="uppercase text-center font-bold tracking-widest text-[40px]">Về chúng tôi</div>
+                        <div className="uppercase text-center text-[#392a25] font-bold tracking-widest text-[40px]">Về chúng tôi</div>
                         <div className="flex justify-center max-w-[350px] m-auto">
                             <div className="h-[1px] relative self-center flex-auto min-w-[10%]">
                                 <div className="h-[1px] border-t border-solid border-[#5e5a54] block relative top-1 w-full"></div>
@@ -106,15 +104,18 @@ const HomePage = () => {
                                         "/img/about-carousel-05.jpg",
                                         "/img/about-carousel-06.jpg",
                                     ].map((image, index) => (
-                                        <div key={index} className="px-2">
+                                        <div key={index} className="">
                                             <div className="aspect-[3/2] w-[150px] p-1 h-auto overflow-hidden">
-                                                <Image
-                                                    src={image}
-                                                    alt={`Carousel Image ${index + 1}`}
-                                                    width={150}
-                                                    height={100}
-                                                    className="object-cover"
-                                                />
+                                                <div className="p-1 rounded-md bg-white">
+                                                    <Image
+                                                        src={image}
+                                                        alt={`Carousel Image ${index + 1}`}
+                                                        width={150}
+                                                        height={100}
+                                                        className="object-cover"
+                                                    />
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     ))}
@@ -124,48 +125,390 @@ const HomePage = () => {
                     </div>
                     
                 </section>
+                
+                <section>
+                    <div className="relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-[#f5f3f0]">
+                        <div className="my-[100px] py-14 px-3">
+                            <div className="uppercase text-center text-[#392a25] font-bold tracking-widest text-[40px]">Danh mục sản phẩm</div>
+                            <div className="flex justify-center max-w-[350px] m-auto">
+                                <div className="h-[1px] relative self-center flex-auto min-w-[10%]">
+                                    <div className="h-[1px] border-t border-solid border-[#5e5a54] block relative top-1 w-full"></div>
+                                </div>
+                                <div className="max-w-[100px]">
+                                    <Image
+                                        src="/img/Screenshot_2025-02-19_113218-removebg-preview.png"
+                                        alt="Flower"
+                                        width={100}
+                                        height={100}
+                                        className="w-full h-auto"
+                                    />
+                                </div>
+                                <div className="h-[1px] relative self-center flex-auto min-w-[10%]">
+                                    <div className="h-[1px] border-t border-solid border-[#5e5a54] block relative top-1 w-full"></div>
+                                </div>
+                            </div>
+                            
+                            <div className="flex max-w-[1140px] gap-7 m-auto mt-10 justify-between">
+                                <div className="w-1/4 flex flex-col items-center p-2 bg-white rounded-md">
+                                    <a href="" className="w-full h-full">
+                                        <div className="image relative w-full h-[270px] overflow-hidden">
+                                            <div className="bg absolute h-[800px] w-[800px] -top-1/2 -left-1/2 rounded-full -translate-x-1/4 -translate-y-[55%] bg-[#ecd4c5]"></div>
+                                            <div className="img absolute">
+                                                <Image 
+                                                    src="/img/homepage-img-03.png" 
+                                                    alt="Nấm các loại"
+                                                    width={485}
+                                                    height={520}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="title font-bold text-lg text-center uppercase py-5">Nấm các loại</div>
+                                    </a>
+                                </div>
+
+                                <div className="w-1/4 flex flex-col items-center p-2 bg-white rounded-md">
+                                    <a href="" className="w-full h-full">
+                                        <div className="image relative w-full h-[270px] overflow-hidden">
+                                            <div className="bg absolute h-[800px] w-[800px] -top-1/2 -left-1/2 rounded-full -translate-x-1/4 -translate-y-[55%] bg-[#e7f2d8]"></div>
+                                            <div className="img absolute">
+                                                <Image 
+                                                    src="/img/do-say-kho-300x300.png" 
+                                                    alt="Đặc sản"
+                                                    width={485}
+                                                    height={520}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="title font-bold text-lg text-center uppercase py-5">Đặc sản</div>
+                                    </a>
+                                </div>
+
+                                <div className="w-1/4 flex flex-col items-center p-2 bg-white rounded-md">
+                                    <a href="" className="w-full h-full">
+                                        <div className="image relative w-full h-[270px] overflow-hidden">
+                                            <div className="bg absolute h-[800px] w-[800px] -top-1/2 -left-1/2 rounded-full -translate-x-1/4 -translate-y-[55%] bg-[#f6edd0]"></div>
+                                            <div className="img absolute">
+                                                <Image 
+                                                    src="/img/rau-cu-sach-300x300 (1).png" 
+                                                    alt="Rau củ an toàn"
+                                                    width={485}
+                                                    height={520}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="title font-bold text-lg text-center uppercase py-5">Rau củ an toàn</div>
+                                    </a>
+                                </div>
+
+                                <div className="w-1/4 flex flex-col items-center p-2 bg-white rounded-md">
+                                    <a href="" className="w-full h-full">
+                                        <div className="image relative w-full h-[270px] overflow-hidden ">
+                                            <div className="bg absolute h-[800px] w-[800px] -top-1/2 -left-1/2 rounded-full -translate-x-1/4 -translate-y-[55%] bg-[#c6e6f6]"></div>
+                                            <div className="img absolute">
+                                                <Image 
+                                                    src="/img/hoa-qua-sach-300x266.png"
+                                                    alt="Trái Cây"
+                                                    width={768}
+                                                    height={682}
+                                                    
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="title font-bold text-lg text-center uppercase py-5">Trái Cây</div>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 {/* Featured Products Section */}
-                <section className="py-16">
-                    <h2 className="text-3xl font-bold text-center mb-8">Sản phẩm nổi bật</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {/* Product Item 1 */}
-                    <div className="text-center">
-                        <Image
-                        src="/product1.jpg"
-                        alt="Product 1"
-                        width={300}
-                        height={300}
-                        className="w-full h-auto"
-                        />
-                        <h3 className="text-xl mt-4">Product Name</h3>
-                        <p className="text-lg">Product Description</p>
-                        <a href="/product" className="inline-block mt-4 bg-green-600 text-white py-2 px-6 rounded-lg">Xem chi tiết</a>
+                <section>
+                    <div className="mb-10">
+                        <div className="uppercase text-center text-[#392a25] font-bold tracking-widest text-[40px]">Sản phẩm nổi bật</div>
+                        <div className="flex justify-center max-w-[350px] m-auto">
+                            <div className="h-[1px] relative self-center flex-auto min-w-[10%]">
+                                <div className="h-[1px] border-t border-solid border-[#5e5a54] block relative top-1 w-full"></div>
+                            </div>
+                            <div className="max-w-[100px]">
+                                <Image
+                                    src="/img/Screenshot_2025-02-19_113218-removebg-preview.png"
+                                    alt="Flower"
+                                    width={100}
+                                    height={100}
+                                    className="w-full h-auto"
+                                />
+                            </div>
+                            <div className="h-[1px] relative self-center flex-auto min-w-[10%]">
+                                <div className="h-[1px] border-t border-solid border-[#5e5a54] block relative top-1 w-full"></div>
+                            </div>
+                        </div>
                     </div>
-                    {/* More product items can be added here */}
+
+                    <div className="flex justify-center mb-8">
+                        <ul className="flex space-x-4">
+                            <li>
+                                <a
+                                    href="#filter"
+                                    className="text-base text-[#5e5a54] hover:text-[#115036] uppercase"
+                                    data-option-value=".product"
+                                >
+                                    All
+                                </a>
+                            </li>
+                            <div className="w-[20px] h-[1px] bg-black self-center"></div>
+                            <li>
+                                <a
+                                    href="#filter"
+                                    className="text-base text-[#5e5a54] hover:text-[#115036] uppercase"
+                                    data-option-value=".product_cat-dac-san"
+                                >
+                                    Đặc sản
+                                </a>
+                            </li>
+                            <div className="w-[20px] h-[1px] bg-black self-center"></div>
+                            <li>
+                                <a
+                                    href="#filter"
+                                    className="text-base text-[#5e5a54] hover:text-[#115036] uppercase"
+                                    data-option-value=".product_cat-trai-cay"
+                                >
+                                    Trái Cây
+                                </a>
+                            </li>
+                            <div className="w-[20px] h-[1px] bg-black self-center"></div>
+                            <li>
+                                <a
+                                    href="#filter"
+                                    className="text-base text-[#5e5a54] hover:text-[#115036] uppercase"
+                                    data-option-value=".product_cat-rau-cu-qua-khong-hoa-chat"
+                                >
+                                    Rau Không Hóa Chất & Hữu cơ
+                                </a>
+                            </li>
+                            <div className="w-[20px] h-[1px] bg-black self-center"></div>
+                            <li>
+                                <a
+                                    href="#filter"
+                                    className="text-base text-[#5e5a54] hover:text-[#115036] uppercase"
+                                    data-option-value=".product_cat-rau-cu-qua-an-toan"
+                                >
+                                    Rau Củ Quả An Toàn
+                                </a>
+                            </li>
+                            <div className="w-[20px] h-[1px] bg-black self-center"></div>
+                            <li>
+                                <a
+                                    href="#filter"
+                                    className="text-base text-[#5e5a54] hover:text-[#115036] uppercase"
+                                    data-option-value=".product_cat-hat-giong"
+                                >
+                                    Hạt giống
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-2 mb-20">
+                        {/* Product Item 1 */}
+                        <div className="rounded-md">
+                            <div className="relative">
+                                <Image
+                                    src="/img/tac-dung-nam-lim-xanh-405x330.jpeg"
+                                    alt="Nấm lim xanh"
+                                    width={405}
+                                    height={330}
+                                    className="object-cover"
+                                />
+                                <div className="absolute right-4 top-4 bg-[#f76b6a] text-white p-4 rounded-[100%] text-sm">HOT</div>
+                                <div className="absolute left-4 top-4 bg-[#f7aa77] text-white p-4 rounded-[100%] text-sm">SALE!</div>
+                            </div>
+                            <div className="mt-4 text-center">
+                                <h3 className="text-xl font-semibold">Nấm lim xanh – Nấm lim xanh rừng tự nhiên Tiên Phước, Quảng Nam</h3>
+                                <div className="flex gap-2 justify-center text-base text-gray-700 mt-2">
+                                    <span className="line-through text-[#cbcac8]">2.600.000₫</span>
+                                    <span className="font-bold text-[#115036]">2.450.000₫</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        {/* Product Item 2 */}
+                        <div className="rounded-md">
+                            <div className="relative">
+                                <Image
+                                    src="/img/tieu-tien-phuoc-1-405x330.jpeg"
+                                    alt="Tiêu Tiên Phước"
+                                    width={405}
+                                    height={330}
+                                    className="object-cover"
+                                />
+                                <div className="absolute right-4 top-4 bg-[#f76b6a] text-white p-4 rounded-[100%] text-sm">HOT</div>
+                                <div className="absolute left-4 top-4 bg-[#f7aa77] text-white p-4 rounded-[100%] text-sm">SALE!</div>
+                            </div>
+                            <div className="mt-4 text-center">
+                                <h3 className="text-xl font-semibold">Tiêu Tiên Phước – Hạt tiêu đặc trưng của xứ Quảng Nam</h3>
+                                <div className="flex gap-2 justify-center text-base text-gray-700 mt-2">
+                                    <span className="line-through text-[#cbcac8]">80.000₫</span>
+                                    <span className="font-bold text-[#115036]">60.000₫</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        {/* Product Item 3 */}
+                        <div className="rounded-md">
+                            <div className="relative">
+                                <Image
+                                    src="/img/mat-ong-nguyen-chat-405x330.jpeg"
+                                    alt="Mật ong rừng"
+                                    width={405}
+                                    height={330}
+                                    className="object-cover"
+                                />
+                                <div className="absolute right-4 top-4 bg-[#f76b6a] text-white p-4 rounded-[100%] text-sm">HOT</div>
+                                <div className="absolute left-4 top-4 bg-[#f7aa77] text-white p-4 rounded-[100%] text-sm">SALE!</div>
+                            </div>
+                            <div className="mt-4 text-center">
+                                <h3 className="text-xl font-semibold">Mật ong rừng nguyên chất 100% tự nhiên</h3>
+                                <div className="text-base flex gap-2 justify-center text-gray-700 mt-2">
+                                    <span className="line-through text-[#cbcac8]">1.200.000₫</span>
+                                    <span className="font-bold text-[#115036]">1.000.000₫</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        {/* Product Item 4 */}
+                        <div className="rounded-md">
+                            <div className="relative">
+                                <Image
+                                    src="/img/297331fb-abf6-44c6-bf52-f84fd9c42eb5_039f916c59c545e69170f7cb5834ca7b-405x330.png"
+                                    alt="Rau mồng tơi"
+                                    width={405}
+                                    height={330}
+                                    className="object-cover "
+                                />
+                            </div>
+                            <div className="mt-4 text-center">
+                                <h3 className="text-xl font-semibold">Rau mồng tơi baby 300gr</h3>
+                                <div className="flex gap-2 justify-center text-base text-gray-700 mt-2">
+                                    <span className="font-bold text-[#115036]">16.000₫</span>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 {/* Testimonials Section */}
-                <section className="bg-gray-50 py-16">
-                    <h2 className="text-3xl font-bold text-center mb-8">Khách hàng nói về chúng tôi</h2>
-                    <div className="flex justify-center space-x-8">
-                    {/* Testimonial 1 */}
-                    <div className="max-w-xs text-center">
-                        <p className="italic">&quot;Mật ong rừng nguyên chất tại Nông Sản Sạch rất ngon và chất lượng&quot;</p>
-                        <div className="mt-4 flex justify-center items-center">
-                        <Image
-                            src="/customer1.jpg"
-                            alt="Customer 1"
-                            width={80}
-                            height={80}
-                            className="rounded-full"
-                        />
-                        <span className="ml-4 text-lg font-semibold">Chị Linh</span>
+                <section className="relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-[#f5f3f0] pb-12" style={{ backgroundImage: "url('/img/testi_bg_02.jpg')" }}>
+
+                    <div className="my-10 ">
+                        <div className="leading-[112px] text-center font-normal font-greatVibes text-[56px] text-white">Khách hàng nói gì về chúng tôi</div>
+                        <div className="flex justify-center max-w-[350px] m-auto">
+                            <div className="h-[1px] relative self-center flex-auto min-w-[10%]">
+                                <div className="h-[1px] border-t border-solid border-[#5e5a54] block relative top-1 w-full"></div>
+                            </div>
+                            <div className="max-w-[100px]">
+                                <Image
+                                    src="/img/Screenshot_2025-02-19_113218-removebg-preview.png"
+                                    alt="Flower"
+                                    width={100}
+                                    height={100}
+                                    className="w-full h-auto"
+                                />
+                            </div>
+                            <div className="h-[1px] relative self-center flex-auto min-w-[10%]">
+                                <div className="h-[1px] border-t border-solid border-[#5e5a54] block relative top-1 w-full"></div>
+                            </div>
+                        </div>
+                        <div className="flex justify-center space-x-8 my-12">
+                            {/* Testimonial 1 */}
+                            <div>
+                                <div className="max-w-xs relative text-left text-[#5e5a54] bg-white p-9 rounded-sm">
+                                    <div className="absolute top-3 left-3">
+                                        <Image
+                                            src="/img/Screenshot 2025-02-20 043732.png"
+                                            alt="Customer 1"
+                                            width={20}
+                                            height={20}
+                                            className="rounded-full"
+                                        />
+                                    </div>
+                                    <p className="italic text-lg mb-4">
+                                        &quot;Mật ong rừng nguyên chất tại Nông Sản Sạch rất ngon và chất lượng.&quot;
+                                    </p>
+                                </div>
+                                <div className="mt-4 flex justify-start items-center">
+                                        <Image
+                                            src="/img/testi_01.png"
+                                            alt="Customer 2"
+                                            width={60}
+                                            height={60}
+                                            className="rounded-full border-4 border-white/20"
+                                        />
+                                        <span className="ml-4 text-white text-lg font-semibold">Chị Linh</span>
+                                </div>
+                            </div>
+                            {/* Testimonial 2 */}
+                            <div>
+                                <div className="max-w-xs relative text-left text-[#5e5a54] bg-white p-9 rounded-sm">
+                                    <div className="absolute top-3 left-3 ">
+                                        <Image
+                                            src="/img/Screenshot 2025-02-20 043732.png"
+                                            alt="Customer 1"
+                                            width={20}
+                                            height={20}
+                                            className="rounded-full "
+                                        />
+                                    </div>
+                                    <p className="italic text-lg mb-4">
+                                        &quot;Tôi đã sử dụng nông sản của cửa hàng, tôi rất yên tâm cho bữa ăn gia đình mình.&quot;
+                                    </p>
+                                </div>
+                                <div className="mt-4 flex justify-start items-center">
+                                        <Image
+                                            src="/img/testi_01.png"
+                                            alt="Customer 2"
+                                            width={60}
+                                            height={60}
+                                            className="rounded-full border-4 border-white/20"
+                                        />
+                                        <span className="ml-4 text-white text-lg font-semibold">Chị Hoa</span>
+                                </div>
+                            </div>
+                            {/* Testimonial 3 */}
+                            <div>
+                                <div className="max-w-xs relative text-left text-[#5e5a54] bg-white p-9 rounded-sm">
+                                    <div className="absolute top-3 left-3">
+                                        <Image
+                                            src="/img/Screenshot 2025-02-20 043732.png"
+                                            alt="Customer 1"
+                                            width={20}
+                                            height={20}
+                                            className="rounded-full"
+                                        />
+                                    </div>
+                                    <p className="italic text-lg mb-4">
+                                        &quot;Tôi đã sử dụng nông sản của cửa hàng, tôi rất yên tâm cho bữa ăn gia đình mình.&quot;
+                                    </p>
+                                </div>
+                                <div className="mt-4 flex justify-start items-center">
+                                        <Image
+                                            src="/img/testi_01.png"
+                                            alt="Customer 2"
+                                            width={60}
+                                            height={60}
+                                            className="rounded-full border-4 border-white/20"
+                                        />
+                                        <span className="ml-4 text-lg text-white font-semibold">Chị Đào</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    {/* More testimonials can be added here */}
-                    </div>
+                    
                 </section>
 
                 {/* Featured Product Promo Section */}
@@ -190,7 +533,26 @@ const HomePage = () => {
 
                 {/* Latest News Section */}
                 <section className="py-16">
-                    <h2 className="text-3xl font-bold text-center mb-8">Tin Mới Nhất</h2>
+                    <div className="mb-10">
+                        <div className="uppercase text-center text-[#392a25] font-bold tracking-widest text-[40px]">Tin mới nhất</div>
+                        <div className="flex justify-center max-w-[350px] m-auto">
+                            <div className="h-[1px] relative self-center flex-auto min-w-[10%]">
+                                <div className="h-[1px] border-t border-solid border-[#5e5a54] block relative top-1 w-full"></div>
+                            </div>
+                            <div className="max-w-[100px]">
+                                <Image
+                                    src="/img/Screenshot_2025-02-19_113218-removebg-preview.png"
+                                    alt="Flower"
+                                    width={100}
+                                    height={100}
+                                    className="w-full h-auto"
+                                />
+                            </div>
+                            <div className="h-[1px] relative self-center flex-auto min-w-[10%]">
+                                <div className="h-[1px] border-t border-solid border-[#5e5a54] block relative top-1 w-full"></div>
+                            </div>
+                        </div>
+                    </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* Blog Post 1 */}
                     <div className="text-center">
