@@ -86,7 +86,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright Section */}
-      <div className="border-t relative border-gray-600 bg-[#22754e]">
+      <div className="border-t relative border-gray-600 bg-[#22754e] hover:cursor-pointer">
       
         <div id="back-to-top" className="w-[127px] h-[37px] top-[-35px] left-1/2  absolute -translate-x-1/2">
           <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="127px" height="37px" viewBox="0 0 127 37" preserveAspectRatio="xMidYMid meet">

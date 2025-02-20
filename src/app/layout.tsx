@@ -36,7 +36,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} antialiased`}
       >
         <Header />
-        {children}
+          <div id="content" className="content bg-white overflow-x-hidden">
+              <div className="container mx-auto px-4">
+                  <div id="primary" className="content-area row">
+                    {children}
+                  </div>
+              </div>
+          </div>
         <Footer />
       </body>
     </html>

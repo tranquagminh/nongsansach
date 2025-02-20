@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FiSearch } from "react-icons/fi"; 
 import { BsCart3 } from "react-icons/bs"; 
+import Link from "next/link";
 
 export default function Header(){
     return (
@@ -35,22 +36,22 @@ export default function Header(){
                             <nav>
                                 <ul className="flex justify-end text-[#115036] font-medium text-lg">
                                     <li className="uppercase">
-                                        <a className="px-7 py-10 inline-block" href="#">Trang Chủ</a>
+                                        <Link className="px-7 py-10 inline-block" href="/">Trang Chủ</Link>
                                     </li>
                                     <li className="uppercase">
-                                        <a className="px-7 py-10 inline-block" href="#">Giới thiệu</a>
+                                        <Link className="px-7 py-10 inline-block" href="/gioi-thieu">Giới thiệu</Link>
                                     </li>
                                     <li className="uppercase">
                                         <a className="px-7 py-10 inline-block" href="#">Sản phẩm</a>
                                     </li>
                                     <li className="uppercase">
-                                        <a className="px-7 py-10 inline-block" href="#">Kiến thức</a>
+                                        <Link className="px-7 py-10 inline-block" href="/tin-tuc">Kiến thức</Link>
                                     </li>
                                     <li className="uppercase">
-                                        <a className="px-7 py-10 inline-block" href="#">Hạt giống</a>
+                                        <a className="px-7 py-10 inline-block" href="/danh-muc/hat-giong">Hạt giống</a>
                                     </li>
                                     <li className="uppercase">
-                                        <a className="px-7 py-10 inline-block" href="#">Liên hệ</a>
+                                        <Link className="px-7 py-10 inline-block" href="/lien-he">Liên hệ</Link>
                                     </li>
                                 </ul>
                             </nav>

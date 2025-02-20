@@ -1,30 +1,14 @@
 import Image from "next/image";
+import SectionTitle from "../ui/SectionTitle";
 
 const CategorySection = () => {
     return (
         <section>
             <div className="relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-[#f5f3f0]">
                 <div className="my-[100px] py-14 px-3">
-                    <div className="uppercase text-center text-[#392a25] font-bold tracking-widest text-[40px]">Danh mục sản phẩm</div>
-                    <div className="flex justify-center max-w-[350px] m-auto">
-                        <div className="h-[1px] relative self-center flex-auto min-w-[10%]">
-                            <div className="h-[1px] border-t border-solid border-[#5e5a54] block relative top-1 w-full"></div>
-                        </div>
-                        <div className="max-w-[100px]">
-                            <Image
-                                src="/img/Screenshot_2025-02-19_113218-removebg-preview.png"
-                                alt="Flower"
-                                width={100}
-                                height={100}
-                                className="w-full h-auto"
-                            />
-                        </div>
-                        <div className="h-[1px] relative self-center flex-auto min-w-[10%]">
-                            <div className="h-[1px] border-t border-solid border-[#5e5a54] block relative top-1 w-full"></div>
-                        </div>
-                    </div>
+                    <SectionTitle title="Danh mục sản phẩm"/>
                     
-                    <div className="flex max-w-[1140px] gap-7 m-auto mt-10 justify-between">
+                    <div className="flex max-w-[1140px] gap-7 m-auto justify-between">
                         <div className="w-1/4 flex flex-col items-center p-2 bg-white rounded-md">
                             <a href="" className="w-full h-full">
                                 <div className="image relative w-full h-[270px] overflow-hidden">

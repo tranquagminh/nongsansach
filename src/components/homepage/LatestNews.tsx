@@ -1,31 +1,13 @@
 import Image from "next/image"
+import SectionTitle from "../ui/SectionTitle"
 
 const LatestNews = () => {
   return (
     <section>
-        <div className="relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-[#f5f3f0]">
-            <div className="py-14">
-                <div className="uppercase text-center text-[#392a25] font-bold tracking-widest text-[40px]">Tin mới nhất</div>
-                <div className="flex justify-center max-w-[350px] m-auto">
-                    <div className="h-[1px] relative self-center flex-auto min-w-[10%]">
-                        <div className="h-[1px] border-t border-solid border-[#5e5a54] block relative top-1 w-full"></div>
-                    </div>
-                    <div className="max-w-[100px]">
-                        <Image
-                            src="/img/Screenshot_2025-02-19_113218-removebg-preview.png"
-                            alt="Flower"
-                            width={100}
-                            height={100}
-                            className="w-full h-auto"
-                        />
-                    </div>
-                    <div className="h-[1px] relative self-center flex-auto min-w-[10%]">
-                        <div className="h-[1px] border-t border-solid border-[#5e5a54] block relative top-1 w-full"></div>
-                    </div>
-                </div>
-            </div>
+        <div className="relative w-[100vw] py-14 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-[#f5f3f0]">
+            <SectionTitle title="Tin mới nhất" />
             <div className="container m-auto px-[150px]">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-20">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
                     {/* Bài viết 1 */}
                     <div className="bg-white rounded-md  overflow-hidden">
                         <div className="w-full h-[200px] overflow-hidden">

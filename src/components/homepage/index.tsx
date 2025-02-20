@@ -10,30 +10,25 @@ import LatestNews from "./LatestNews";
 
 const HomePage = () => {
     return (    
-        <div id="content" className="content bg-white overflow-x-hidden">
-            <div className="container mx-auto px-4">
-                <div id="primary" className="content-area row">
-                <HeroSection />
+        <>
+            <HeroSection />
 
-                {/* About Us Section */}
-                <AboutSection />
-                
-                <CategorySection />
+            {/* About Us Section */}
+            <AboutSection title="Về Chúng tôi"/>
+            
+            <CategorySection />
 
-                {/* Featured Products Section */}
-                <FeaturedProducts />
+            {/* Featured Products Section */}
+            <FeaturedProducts />
 
-                {/* Testimonials Section */}
-                <TestimonialsSection />
+            {/* Testimonials Section */}
+            <TestimonialsSection />
 
-                {/* Featured Product Promo Section */}
-                <PromoSection />
-                {/* Latest News Section */}
-                <LatestNews />
-                
-                </div>
-            </div>
-        </div>
+            {/* Featured Product Promo Section */}
+            <PromoSection />
+            {/* Latest News Section */}
+            <LatestNews />
+        </>
     );
 }
 
