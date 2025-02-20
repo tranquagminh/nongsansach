@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
     return (
-        <section className="relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-gray-100 text-center">
+        <section className="relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-gray-100 text-center mt-32">
             <Image
             src="/img/slider-home-03-slide3-background.jpg" 
             alt="Hero Image" 
