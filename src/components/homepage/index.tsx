@@ -8,7 +8,6 @@ import PromoSection from "./PromoSection";
 import LatestNews from "./LatestNews";
 
 
-
 const HomePage = () => {
     return (    
         <div id="content" className="content bg-white overflow-x-hidden">
