@@ -597,7 +597,7 @@ const HomePage = () => {
                 {/* Latest News Section */}
                 <section>
                     <div className="relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-[#f5f3f0]">
-                        <div className="mb-10 py-14">
+                        <div className="py-14">
                             <div className="uppercase text-center text-[#392a25] font-bold tracking-widest text-[40px]">Tin mới nhất</div>
                             <div className="flex justify-center max-w-[350px] m-auto">
                                 <div className="h-[1px] relative self-center flex-auto min-w-[10%]">
