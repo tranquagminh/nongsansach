@@ -24,7 +24,7 @@ export default function Header(){
                             <a className="w-full self-center" href="https://nongsansach.com/">
                                 <Image
                                     className="w-full"
-                                    src="/img/logo-ns-web.png"
+                                    src="/logo-ns-web.png"
                                     alt="Vercel logomark"
                                     width={200}
                                     height={200}

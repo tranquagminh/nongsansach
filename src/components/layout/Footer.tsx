@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="col-span-5">
             <div className="flex items-center gap-4 mb-4">
               <Image
-                src="/img/logo-ns-web-ft2.png"
+                src="/logo-ns-web-ft2.png"
                 alt="Nông Sản Sạch"
                 width={300}
                 height={200}
@@ -95,16 +95,12 @@ export default function Footer() {
                 -50 -13 0 -15 555 -15 555 0 605 2 555 15 -79 21 -158 71 -194 124 -59 86
                 -137 159 -203 192 -76 37 -188 48 -260 24z"></path>
             </g>  
-            <svg x="51.5" y="15" fill="#115036" width={24} height={24} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-              <path d="M246.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L224 109.3 361.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160zm160 352l-160-160c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L224 301.3 361.4 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3z"/>
-            </svg>
           </svg>
-          
         </div>
         <div className="container mx-auto py-4 flex justify-between items-center">
           <p>Copyright © 2008-2023 Nông Sản Sạch</p>
           <div className="flex gap-2">
-            <Image src="/img/footer_payment_01.png" alt="PayPal" width={133} height={20} />
+            <Image src="/footer_payment_01.png" alt="PayPal" width={133} height={20} />
           </div>
         </div>
       </div>
