@@ -42,7 +42,7 @@ const HomePage = () => {
                     alt="Hero Image" 
                     width={1920} 
                     height={600}
-                    className="w-[1420px] h-auto"
+                    className="w-full h-auto"
                     />
                     <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 text-white">
                     <h4 className="text-base font-semibold uppercase">Nông Sản Sạch Gia Linh</h4>

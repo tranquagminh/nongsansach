@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="col-span-5">
             <div className="flex items-center gap-4 mb-4">
               <Image
-                src="/logo-ns-web-ft2.png"
+                src="/img/logo-ns-web-ft2.png"
                 alt="Nông Sản Sạch"
                 width={300}
                 height={200}
@@ -100,7 +100,7 @@ export default function Footer() {
         <div className="container mx-auto py-4 flex justify-between items-center">
           <p>Copyright © 2008-2023 Nông Sản Sạch</p>
           <div className="flex gap-2">
-            <Image src="/footer_payment_01.png" alt="PayPal" width={133} height={20} />
+            <Image src="/img/footer_payment_01.png" alt="PayPal" width={133} height={20} />
           </div>
         </div>
       </div>
