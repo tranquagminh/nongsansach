@@ -5,6 +5,28 @@ import Image from "next/image";
 import SectionTitle from "@/components/ui/SectionTitle";
 
 export default function AboutPage() {
+    const brands = [
+        {
+          name: "Pomade Co.",
+          logo: "/img/about-carousel-02.png",
+        },
+        {
+          name: "Soul Bean Roastery",
+          logo: "/img/client-02.png",
+        },
+        {
+          name: "Greenwood",
+          logo: "/img/client-03.png",
+        },
+        {
+          name: "Juicy Online Media",
+          logo: "/img/client-04.png",
+        },
+        {
+          name: "OrganicLand",
+          logo: "/img/client-05.png",
+        }
+      ];
     return (
         <div>
             <PageBanner title="Giới thiệu"/>
@@ -56,20 +78,23 @@ export default function AboutPage() {
                                 {
                                     title: "Ăn uống lành mạnh hơn",
                                     description: "Có được các loại trái cây và rau quả được thu hoạch hàng ngày.",
+                                    img: '/img/Screenshot_2025-02-21_183431-removebg-preview.png'
                                 },
                                 {
                                     title: "Chúng tôi có danh tiếng.",
                                     description: "Chúng tôi đã cung cấp các sản phẩm hữu cơ cho khách hàng từ năm 2008.",
+                                    img: '/img/Screenshot_2025-02-21_at_23.00.49-removebg-preview.png'
                                 },
                                 {
                                     title: "Tươi & Không có thuốc trừ sâu.",
                                     description: "Chúng tôi cung cấp các sản phẩm hữu cơ không có thuốc trừ sâu và được trồng bền vững.",
+                                    img: '/img/image-removebg-preview.png'
                                 }
                             ].map((item, index) => (
                                 <div key={index} className="flex items-center gap-7">
                                     <div className="flex items-center justify-center w-[70px] h-[70px] bg-[#f9f9f9] rounded-full">
                                         <Image 
-                                            src="/img/Screenshot_2025-02-21_183431-removebg-preview.png"
+                                            src={item.img}
                                             alt="About Us"
                                             width={50}
                                             height={50}
@@ -97,14 +122,17 @@ export default function AboutPage() {
                                 {
                                     title: "Ăn uống lành mạnh hơn",
                                     description: "Có được các loại trái cây và rau quả được thu hoạch hàng ngày.",
+                                    img: '/img/image-removebg-preview (1).png'
                                 },
                                 {
                                     title: "Chúng tôi có danh tiếng.",
                                     description: "Chúng tôi đã cung cấp các sản phẩm hữu cơ cho khách hàng từ năm 2008.",
+                                    img: '/img/image-removebg-preview (2).png'
                                 },
                                 {
                                     title: "Tươi & Không có thuốc trừ sâu.",
                                     description: "Chúng tôi cung cấp các sản phẩm hữu cơ không có thuốc trừ sâu và được trồng bền vững.",
+                                    img: '/img/image-removebg-preview (3).png'
                                 }
                             ].map((item, index) => (
                                 <div key={index} className="flex items-center gap-7">
@@ -115,7 +143,7 @@ export default function AboutPage() {
                                     </div>
                                     <div className="flex items-center justify-center w-[70px] h-[70px] bg-[#f9f9f9] rounded-full">
                                         <Image 
-                                            src="/img/Screenshot_2025-02-21_183431-removebg-preview.png"
+                                            src={item.img}
                                             alt="About Us"
                                             width={50}
                                             height={50}
@@ -134,44 +162,63 @@ export default function AboutPage() {
                 </div>
                 <SectionTitle title="Hiện có mặt tại"/>
                 <div className="container mx-auto py-16">
-                <div className="grid grid-cols-3 gap-8">
-                    {[
-                        { city: "HÀ NỘI", img: "/img/trong-rau-sach-tai-ha-noi-8.jpg" },
-                        { city: "HỒ CHÍ MINH", img: "/img/thiet-ke-nha-luoi-trong-rau-sach2.png" },
-                        { city: "ĐÀ NẴNG", img: "/img/rau-sach-da-lat-1.jpeg" },
-                    ].map((item, index) => (
-                        <div key={index} className="text-center">
-                            <div className="relative group">
-                                <Image 
-                                    src={item.img}
-                                    alt={item.city}
-                                    width={400}
-                                    height={300}
-                                    className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
-                                />
+                    <div className="grid grid-cols-3 gap-8">
+                        {[
+                            { city: "HÀ NỘI", img: "/img/trong-rau-sach-tai-ha-noi-8.jpg" },
+                            { city: "HỒ CHÍ MINH", img: "/img/thiet-ke-nha-luoi-trong-rau-sach2.png" },
+                            { city: "ĐÀ NẴNG", img: "/img/rau-sach-da-lat-1.jpeg" },
+                        ].map((item, index) => (
+                            <div key={index} className="text-center">
+                                <div className="relative group">
+                                    <Image 
+                                        src={item.img}
+                                        alt={item.city}
+                                        width={400}
+                                        height={300}
+                                        className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                                    />
+                                </div>
+                                <h3 className="text-lg font-bold mt-4 text-[#392a25]">{item.city}</h3>
+                                <div className="h-[1px] w-[60px] m-auto bg-black my-3"></div>
+                                <div className="flex justify-center space-x-4 mt-2">
+                                    <a href="#" className=" rounded-full bg-gray-100 hover:bg-gray-200 transition">
+                                        <i className="fab p-3 fa-facebook"></i>
+                                    </a>
+                                    <a href="#" className=" rounded-full bg-gray-100 hover:bg-gray-200 transition">
+                                        <i className="fab p-3 fa-google"></i>
+                                    </a>
+                                    <a href="#" className=" rounded-full bg-gray-100 hover:bg-gray-200 transition">
+                                        <i className="fab p-3 fa-pinterest"></i>
+                                    </a>
+                                    <a href="#" className=" rounded-full bg-gray-100 hover:bg-gray-200 transition">
+                                        <i className="fab p-3 fa-twitter"></i>
+                                    </a>
+                                </div>
                             </div>
-                            <h3 className="text-lg font-bold mt-4 text-[#392a25]">{item.city}</h3>
-                            <div className="h-[1px] w-[60px] m-auto bg-black my-3"></div>
-                            <div className="flex justify-center space-x-4 mt-2">
-                                <a href="#" className=" rounded-full bg-gray-100 hover:bg-gray-200 transition">
-                                    <i className="fab p-3 fa-facebook"></i>
-                                </a>
-                                <a href="#" className=" rounded-full bg-gray-100 hover:bg-gray-200 transition">
-                                    <i className="fab p-3 fa-google"></i>
-                                </a>
-                                <a href="#" className=" rounded-full bg-gray-100 hover:bg-gray-200 transition">
-                                    <i className="fab p-3 fa-pinterest"></i>
-                                </a>
-                                <a href="#" className=" rounded-full bg-gray-100 hover:bg-gray-200 transition">
-                                    <i className="fab p-3 fa-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
-            </div>
             
+            <div className="py-16 bg-white">
+                <div className="container mx-auto">
+                    
+                    
+                    <div className="flex items-center justify-around gap-16">
+                    {brands.map((brand, index) => (
+                        <div key={index} className="grayscale hover:grayscale-0 transition-all duration-300">
+                        <Image
+                            src={brand.logo}
+                            alt={brand.name}
+                            width={200}
+                            height={100}
+                            className="w-auto h-16 object-contain hover:cursor-pointer"
+                        />
+                        </div>
+                    ))}
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
