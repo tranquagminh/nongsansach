@@ -2,6 +2,7 @@ import AboutSection from "@/components/homepage/AboutSection";
 import PageBanner from "@/components/ui/PageBanner";
 import Link from "next/link";
 import Image from "next/image";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 export default function AboutPage() {
     return (
@@ -127,7 +128,49 @@ export default function AboutPage() {
                     </div>
                 </div>
             </div>
-            
+            <div>
+                <div className="text-center mt-[100px]">
+                    <h1 className="leading-[112px] font-normal font-greatVibes text-[56px] text-[#115036]">Cửa Hàng Nông Sản Sạch</h1>
+                </div>
+                <SectionTitle title="Hiện có mặt tại"/>
+                <div className="container mx-auto py-16">
+                <div className="grid grid-cols-3 gap-8">
+                    {[
+                        { city: "HÀ NỘI", img: "/img/trong-rau-sach-tai-ha-noi-8.jpg" },
+                        { city: "HỒ CHÍ MINH", img: "/img/thiet-ke-nha-luoi-trong-rau-sach2.png" },
+                        { city: "ĐÀ NẴNG", img: "/img/rau-sach-da-lat-1.jpeg" },
+                    ].map((item, index) => (
+                        <div key={index} className="text-center">
+                            <div className="relative group">
+                                <Image 
+                                    src={item.img}
+                                    alt={item.city}
+                                    width={400}
+                                    height={300}
+                                    className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                                />
+                            </div>
+                            <h3 className="text-lg font-bold mt-4 text-[#392a25]">{item.city}</h3>
+                            <div className="h-[1px] w-[60px] m-auto bg-black my-3"></div>
+                            <div className="flex justify-center space-x-4 mt-2">
+                                <a href="#" className=" rounded-full bg-gray-100 hover:bg-gray-200 transition">
+                                    <i className="fab p-3 fa-facebook"></i>
+                                </a>
+                                <a href="#" className=" rounded-full bg-gray-100 hover:bg-gray-200 transition">
+                                    <i className="fab p-3 fa-google"></i>
+                                </a>
+                                <a href="#" className=" rounded-full bg-gray-100 hover:bg-gray-200 transition">
+                                    <i className="fab p-3 fa-pinterest"></i>
+                                </a>
+                                <a href="#" className=" rounded-full bg-gray-100 hover:bg-gray-200 transition">
+                                    <i className="fab p-3 fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            </div>
             
         </div>
     );
